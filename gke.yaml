@@ -7,16 +7,16 @@ spec:
   selector:
     matchLabels:
       app: gcp
-template:
-  metadata:
-    labels:
-      app: gcp
-  spec:
-    containers:
-    - name: gcp-devops-gke
-      image: gcr.io/kodecloud-gcp-training/test-gcpdevops:latest
-      ports:
-      - containerPort: 5000
-      env:
-        - name: PORT
-          value: "5000"
+  template:
+    metadata:
+      labels:
+        app: gcp
+    spec:
+      containers:
+      - name: gcp-devops-gke
+        image: gcr.io/kodecloud-gcp-training/test-gcpdevops:latest
+        ports:
+        - containerPort: 5000
+        env:
+          - name: PORT
+            value: "5000"
